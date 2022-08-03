@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mariadb:
+    image: mariadb:10.8.3
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_USER: "api"
+      MYSQL_DATABASE: "finances"
+      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: 12345
+    volumes:
+      - .docker/data:/var/lib/mysql
+
